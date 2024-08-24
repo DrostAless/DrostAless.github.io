@@ -3,30 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>音乐播放示例</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>个人介绍页面</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+    <!-- 隐藏并自动播放音乐 -->
+    <audio id="background-music" autoplay loop>
+        <source src="path-to-your-music-file.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+    </audio>
+
+    <!-- 导航栏 -->
     <header class="header">
         <div class="container">
-            <h1>音乐播放器示例</h1>
+            <h1>个人介绍</h1>
         </div>
     </header>
 
-    <section class="music-player">
+    <!-- 个人介绍部分 -->
+    <section class="about-me">
         <div class="container">
-            <h2>现在播放</h2>
-            <audio controls>
-                <source src="/Magic Waltz - Amedeo Tommasi.mp3" type="audio/mpeg">
-                您的浏览器不支持音频元素。
-            </audio>
+            <div class="profile">
+                <img src="path-to-your-photo.jpg" alt="Your Name">
+                <h2>你的名字</h2>
+                <p>你好，我叫[你的名字]，是一名[你的职业或兴趣]。我热爱[你的兴趣或爱好]，并且对[你的专业领域]有浓厚的兴趣。在业余时间，我喜欢[描述你的业余爱好]。</p>
+                <div class="contact-buttons">
+                    <a href="mailto:your.email@example.com" class="btn">Email</a>
+                    <a href="https://linkedin.com/in/yourprofile" class="btn">LinkedIn</a>
+                    <a href="https://github.com/yourusername" class="btn">GitHub</a>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 音乐播放器示例. All rights reserved.</p>
+            <p>&copy; 2024 个人介绍页面. All rights reserved.</p>
         </div>
     </footer>
 </body>
