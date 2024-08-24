@@ -1,0 +1,191 @@
+/* 通用样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* 容器类 */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* 头部导航栏 */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 20px;
+}
+
+nav .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav .nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* 主页横幅 */
+.hero {
+    background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+    color: #fff;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero .container h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero .container p {
+    font-size: 24px;
+}
+
+/* 各个部分的样式 */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background: #333;
+    display: block;
+    margin: 10px auto 0;
+}
+
+/* 关于我 */
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* 项目展示 */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.project-item h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.project-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* 技能展示 */
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-list li {
+    background: #f4f4f4;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+/* 联系方式 */
+.contact-section p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-section a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* 页脚 */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    nav .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero .container h1 {
+        font-size: 36px;
+    }
+
+    .hero .container p {
+        font-size: 20px;
+    }
+}
