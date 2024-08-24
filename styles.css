@@ -16,159 +16,28 @@ body {
 /* 导航栏 */
 .header {
     background-color: #333;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 24px;
     color: #fff;
-    font-weight: 700;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    margin: 0;
-}
-
-.navbar li {
-    margin-left: 20px;
-}
-
-.navbar a {
-    color: #fff;
-    font-weight: 400;
-    transition: color 0.3s;
-}
-
-.navbar a:hover {
-    color: #f39c12;
-}
-
-/* 主页 */
-.hero {
-    background: url('https://via.placeholder.com/1200x800') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    margin-top: 60px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 24px;
-    margin-bottom: 30px;
-}
-
-.cta-button {
-    padding: 15px 30px;
-    background-color: #f39c12;
-    color: #fff;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: 600;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #e67e22;
-}
-
-/* 关于我 */
-.about {
-    padding: 100px 20px;
-    background-color: #fff;
-}
-
-.about h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
-}
-
-.about p {
-    font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    color: #666;
-}
-
-/* 项目 */
-.projects {
-    padding: 100px 20px;
-    background-color: #f4f4f4;
-}
-
-.projects h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
-}
-
-.project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.project-item {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(33% - 20px);
-}
-
-.project-item img {
-    width: 100%;
-    display: block;
-}
-
-.project-item h3 {
     padding: 20px;
-    font-size: 20px;
-    color: #333;
+    text-align: center;
 }
 
-.project-item p {
-    padding: 0 20px 20px;
-    font-size: 16px;
-    color: #666;
-}
-
-/* 联系 */
-.contact {
-    padding: 100px 20px;
+/* 音乐播放器 */
+.music-player {
+    padding: 50px 20px;
     background-color: #fff;
     text-align: center;
 }
 
-.contact h2 {
-    font-size: 36px;
+.music-player h2 {
+    font-size: 24px;
     margin-bottom: 20px;
-    color: #333;
 }
 
-.contact p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px;
+audio {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
 }
 
 /* 页脚 */
@@ -177,5 +46,4 @@ body {
     color: #fff;
     padding: 20px;
     text-align: center;
-    margin-top: 20px;
 }
