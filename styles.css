@@ -1,191 +1,170 @@
-/* 通用样式 */
-* {
+/* 基础样式 */
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background-color: #f7f7f7;
     color: #333;
+    line-height: 1.6;
 }
 
-/* 容器类 */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-/* 头部导航栏 */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+/* 导航栏 */
+.header {
+    background: #333;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-nav .container {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-nav .logo a {
-    color: #fff;
-    text-decoration: none;
+.logo {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 600;
+    color: #fff;
 }
 
-nav .nav-links {
+.nav-links {
     list-style: none;
     display: flex;
 }
 
-nav .nav-links li {
+.nav-links li {
     margin-left: 20px;
 }
 
-nav .nav-links a {
+.nav-links a {
     color: #fff;
-    text-decoration: none;
-    font-size: 16px;
+    font-weight: 300;
+    transition: color 0.3s;
 }
 
-nav .nav-links a:hover {
-    text-decoration: underline;
+.nav-links a:hover {
+    color: #f39c12;
 }
 
 /* 主页横幅 */
 .hero {
-    background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
-    color: #fff;
-    height: 400px;
+    background: url('https://via.placeholder.com/1200x800') no-repeat center center/cover;
+    height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    color: #fff;
     text-align: center;
 }
 
-.hero .container h1 {
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
 }
 
-.hero .container p {
+.hero p {
     font-size: 24px;
-}
-
-/* 各个部分的样式 */
-section {
-    padding: 60px 0;
-}
-
-section h2 {
-    text-align: center;
     margin-bottom: 40px;
-    font-size: 32px;
-    position: relative;
 }
 
-section h2::after {
-    content: '';
-    width: 100px;
-    height: 4px;
-    background: #333;
-    display: block;
-    margin: 10px auto 0;
+.hero .btn {
+    padding: 15px 30px;
+    background: #f39c12;
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero .btn:hover {
+    background: #e67e22;
 }
 
 /* 关于我 */
-.about-section p {
+.about, .portfolio, .contact {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about h2, .portfolio h2, .contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p, .contact p {
+    font-size: 18px;
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
-    font-size: 18px;
 }
 
-/* 项目展示 */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.project-item {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.project-item h3 {
-    margin-bottom: 10px;
-    font-size: 24px;
-}
-
-.project-item p {
-    font-size: 16px;
-    color: #666;
-}
-
-/* 技能展示 */
-.skills-list {
-    list-style: none;
+/* 作品集 */
+.portfolio-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-.skills-list li {
-    background: #f4f4f4;
-    margin: 10px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 16px;
+.portfolio-item {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    width: calc(33% - 20px);
+    transition: transform 0.3s;
 }
 
-/* 联系方式 */
-.contact-section p {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 10px;
+.portfolio-item img {
+    width: 100%;
+    display: block;
 }
 
-.contact-section a {
-    color: #333;
-    text-decoration: none;
+.portfolio-item h3 {
+    padding: 20px;
+    font-size: 20px;
+    background: #333;
+    color: #fff;
 }
 
-.contact-section a:hover {
-    text-decoration: underline;
+.portfolio-item:hover {
+    transform: translateY(-10px);
+}
+
+/* 联系 */
+.contact .btn {
+    padding: 15px 30px;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.contact .btn:hover {
+    background: #555;
 }
 
 /* 页脚 */
-footer {
-    background-color: #333;
+.footer {
+    background: #333;
     color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 20px 0;
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    nav .nav-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav .nav-links li {
-        margin: 10px 0;
-    }
-
-    .hero .container h1 {
-        font-size: 36px;
-    }
-
-    .hero .container p {
-        font-size: 20px;
-    }
 }
