@@ -556,31 +556,31 @@
 <!-- 模态框部分 -->
 <div id="modal1" class="modal">
     <a href="#" class="modal-close">×</a>
-    <img src="img/Venice.jpg" alt="Full Image">
+    <img src="/Venice.jpg" alt="Full Image">
 </div>
 <div id="modal2" class="modal">
     <a href="#" class="modal-close">×</a>
-    <img src="img/London Big Ben.jpg" alt="Full Image">
+    <img src="/London Big Ben.jpg" alt="Full Image">
 </div>
 <div id="modal3" class="modal">
     <a href="#" class="modal-close">×</a>
-    <img src="img/Paris Louvre.jpg" alt="Full Image">
+    <img src="/Paris Louvre.jpg" alt="Full Image">
 </div>
 <div id="modal4" class="modal">
     <a href="#" class="modal-close">×</a>
-    <img src="img/Berlin Brandenburg Gate.jpg" alt="Full Image">
+    <img src="/Berlin Brandenburg Gate.jpg" alt="Full Image">
 </div>
 <div id="modal5" class="modal">
     <a href="#" class="modal-close">×</a>
-    <img src="img/New York Manhattan.jpg" alt="Full Image">
+    <img src="/New York Manhattan.jpg" alt="Full Image">
 </div>
 <div id="modal6" class="modal">
     <a href="#" class="modal-close">×</a>
-    <img src="img/Shanghai Pujiang.jpg" alt="Full Image">
+    <img src="/Shanghai Pujiang.jpg" alt="Full Image">
 </div>
 <div id="modal7" class="modal">
     <a href="#" class="modal-close">×</a>
-    <img src="img/Paris Notre-Dame.jpg" alt="Full Image">
+    <img src="/Paris Notre-Dame.jpg" alt="Full Image">
 </div>
 
 <section>
@@ -608,34 +608,7 @@ for (let i = 0; i < captions.length; i++) {
 
 
 
-    let keysPressed = {};
-        let isTriggered = false; // 用于跟踪是否已触发事件
-
-        document.addEventListener('keydown', function(event) {
-            // 只记录 Z、J 和 L 键
-            if (event.key === 'a' || event.key === 'l' || event.key === 'r') {
-                keysPressed[event.key] = true;
-            }
-
-            // 检查是否同时按下 Z、J 和 L 且未触发过
-            if (keysPressed['a'] && keysPressed['l'] && keysPressed['r'] && !isTriggered) {
-                window.location.href = 'https://gallery.adgs.tech/fCEHgLrASyGaPHzCyEhPIA=/';
-                // 在这里可以添加其他需要执行的操作，例如跳转页面
-                // window.location.href = 'https://www.example.com';
-            }
-        });
-
-        document.addEventListener('keyup', function(event) {
-            // 当松开时移除已记录的键
-            if (event.key === 'a' || event.key === 'l' || event.key === 'r') {
-                delete keysPressed[event.key];
-            }
-
-            // 如果松开后不再有任何键被按下，则重置触发状态
-            if (!keysPressed['a'] && !keysPressed['l'] && !keysPressed['r']) {
-                isTriggered = false; // 重置为未触发状态
-            }
-        });
+    
     
 </script>
 
